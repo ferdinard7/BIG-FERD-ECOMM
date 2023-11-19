@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { register } from "../redux/apiCalls";
+import styled from "styled-components";
 
+const Error = styled.span`
+color: red;
+`
 
 function Register() {
 
@@ -13,7 +17,7 @@ function Register() {
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
   const [email, setEmail] = useState("");
-  const [comfirmPass, setComfirmPass] = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
   const dispatch = useDispatch();
   const {isFetching, error} = useSelector((state) => state.user);
 
@@ -38,12 +42,12 @@ function Register() {
     <div className="register-wrapper">
       <h1 className="register-title">CREATE AN ACCOUNT</h1>
       <form className="register-form">
-      <input className="register-input" placeholder="first name" autoComplete="off" onChange={(e) =>setFName(e.target.value)} />
-      <input className="register-input" placeholder="last name" autoComplete="off" onChange={(e) =>setLName(e.target.value)}/>
+      <input className="register-input" placeholder="first name" value={fName} autoComplete="off" onChange={(e) =>setFName(e.target.value)} />
+      <input className="register-input" placeholder="last name" autoComplete="off" value={lName} onChange={(e) =>setLName(e.target.value)}/>
       <input className="register-input" placeholder="username" autoComplete="off" onChange={(e) => setUsername(e.target.value)}/>
       <input className="register-input" placeholder="email" autoComplete="off" onChange={(e) => setEmail(e.target.value)}/>
       <input className="register-input" placeholder="password" autoComplete="off" onChange={(e) =>setPassword(e.target.value)}/>
-      <input className="register-input" placeholder="confirm password" autoComplete="off" onChange={(e) =>setComfirmPass(e.target.value)}/>
+      <input className="register-input" placeholder="confirm password" autoComplete="off" value={confirmPass} onChange={(e) =>setConfirmPass(e.target.value)}/>
       <span className="agreement">
    By creating an account, i consent to the process of my personal data in accordance with <b>PRIVACY POLICY</b>
       </span>
