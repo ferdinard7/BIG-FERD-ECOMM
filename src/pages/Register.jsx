@@ -38,12 +38,12 @@ function Register() {
     <div className="register-wrapper">
       <h1 className="register-title">CREATE AN ACCOUNT</h1>
       <form className="register-form">
-      <input className="register-input" placeholder="first name" onChange={(e) =>setFName(e.target.value)} />
-      <input className="register-input" placeholder="last name" onChange={(e) =>setLName(e.target.value)}/>
-      <input className="register-input" placeholder="username" onChange={(e) => setUsername(e.target.value)}/>
-      <input className="register-input" placeholder="email" onChange={(e) => setEmail(e.target.value)}/>
-      <input className="register-input" placeholder="password" onChange={(e) =>setPassword(e.target.value)}/>
-      <input className="register-input" placeholder="confirm password" onChange={(e) =>setComfirmPass(e.target.value)}/>
+      <input className="register-input" placeholder="first name" autoComplete="off" onChange={(e) =>setFName(e.target.value)} />
+      <input className="register-input" placeholder="last name" autoComplete="off" onChange={(e) =>setLName(e.target.value)}/>
+      <input className="register-input" placeholder="username" autoComplete="off" onChange={(e) => setUsername(e.target.value)}/>
+      <input className="register-input" placeholder="email" autoComplete="off" onChange={(e) => setEmail(e.target.value)}/>
+      <input className="register-input" placeholder="password" autoComplete="off" onChange={(e) =>setPassword(e.target.value)}/>
+      <input className="register-input" placeholder="confirm password" autoComplete="off" onChange={(e) =>setComfirmPass(e.target.value)}/>
       <span className="agreement">
    By creating an account, i consent to the process of my personal data in accordance with <b>PRIVACY POLICY</b>
       </span>
