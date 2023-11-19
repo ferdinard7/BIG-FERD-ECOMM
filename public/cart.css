@@ -1,0 +1,148 @@
+.cart-wrapper {
+    padding: 20px;
+}
+
+.cart-title {
+    font-weight: 300;
+    text-align: center;
+}
+
+.cart-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.top-text {
+   text-decoration: underline;
+   cursor: pointer;
+   margin: 0 10px;
+}
+
+.cart-top-button {
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.cart-bottom {
+ display: flex;
+ justify-content: space-between;
+}
+
+
+.cart-info {
+   flex: 3;
+}
+
+.summary {
+    flex: 1;
+    border: 0.5px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    height: 50vh;
+}   
+
+.cart-product {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-product-detail {
+  flex: 2;
+  display: flex;
+}
+
+.cart-product-detail img {
+  width: 200px;
+
+}
+
+.cart-details {
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+.cart-product-name {
+
+}
+
+.cart-product-id {
+
+}
+
+.cart-product-color {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+}
+
+.cart-product-size {
+
+}
+
+.cart-price-detail {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.cart-product-amount-container {
+ display: flex;
+ align-items: center;
+ margin-bottom: 20px;
+}
+
+.cart-product-amount {
+font-size: 24px;
+margin: 5px;
+}
+
+.cart-product-price {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+hr {
+ background-color: #eee;
+ border: none;
+ height: 1px;
+
+}
+
+@media only screen and (max-width: 440px) {
+   
+   .cart-wrapper {
+    padding: 10px;
+   }
+
+   .cart-top-button {
+      margin-right: 2%;
+   }
+   
+   .top-texts {
+     display: none;
+   }
+
+   .cart-bottom {
+      flex-direction: column;  
+   }
+
+   .cart-product {
+     flex-direction: column;
+   }
+
+   .cart-product-amount {
+    margin: 5px 15px;
+   }
+
+   .cart-product-price {
+    margin-bottom: 20px;
+   }
+ }
